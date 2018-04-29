@@ -1,0 +1,12 @@
+[Unit]
+Description=Send IP to Email
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/code/SendIPtoEmail
+ExecStart=/home/pi/code/SendIPtoEmail/SendIP.sh
+
+[Install]
+WantedBy=multi-user.target
